@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "nombre": "Electrónicos",
+    "descripcion": "Dispositivos electrónicos y gadgets"
+  },
+  {
+    "id": 2,
+    "nombre": "Ropa",
+    "descripcion": "Prendas de vestir para hombres y mujeres"
+  },
+  {
+    "id": 3,
+    "nombre": "Hogar",
+    "descripcion": "Artículos para el hogar y decoración"
+  },
+  {
+    "id": 4,
+    "nombre": "Deportes",
+    "descripcion": "Equipamiento y ropa deportiva"
+  },
+  {
+    "id": 5,
+    "nombre": "Libros",
+    "descripcion": "Libros de todos los géneros"
+  }
+]

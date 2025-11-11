@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1001,
+        "cliente_id": 45,
+        "fecha_pedido": "2024-03-15",
+        "estado": "entregado",
+        "total": 299.99
+    },
+    {
+        "id": 1002,
+        "cliente_id": 78,
+        "fecha_pedido": "2024-03-16",
+        "estado": "procesando",
+        "total": 150.5
+    },
+    {
+        "id": 1003,
+        "cliente_id": 12,
+        "fecha_pedido": "2024-03-17",
+        "estado": "pendiente",
+        "total": 89.99
+    },
+    {
+        "id": 1004,
+        "cliente_id": 56,
+        "fecha_pedido": "2024-03-18",
+        "estado": "enviado",
+        "total": 450.75
+    },
+    {
+        "id": 1005,
+        "cliente_id": 89,
+        "fecha_pedido": "2024-03-19",
+        "estado": "cancelado",
+        "total": 199.99
+    }
+]

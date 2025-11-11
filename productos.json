@@ -1,0 +1,7 @@
+[
+    { "id": 1, "nombre": "Laptop", "precio": 1200 },
+    { "id": 2, "nombre": "Smartphone", "precio": 850 },
+    { "id": 3, "nombre": "Tablet", "precio": 600 },
+    { "id": 4, "nombre": "Monitor", "precio": 300 },
+    { "id": 5, "nombre": "Teclado mecánico", "precio": 150 }
+]

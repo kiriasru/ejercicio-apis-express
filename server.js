@@ -1,5 +1,5 @@
 const express = require('express');
-const fs = require('fs');
+const fs = require('fs/promises');
 const app = express();
 const PORT = 3000;
 const path = require('path');
@@ -13,7 +13,11 @@ async function readJson(ruta) {
 };
 
 // GET - Productos
-
+app.get('/api/productos', async (req, res)=>{
+    const ruta = './data/productos.json'
+    const productos = await readJson(ruta);
+    res.json({status:200, message:'success', data:{produtos:productos}});
+})
 
 // GET - USuarios
 

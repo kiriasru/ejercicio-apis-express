@@ -12,14 +12,12 @@ async function readJson(ruta) {
     return JSON.parse(texto);
 };
 
-// GET - Productos
 app.get('/api/productos', async (req, res)=>{
     const ruta = './data/productos.json'
     const productos = await readJson(ruta);
     res.json({status:200, message:'success', data:{produtos:productos}});
 })
 
-// GET - USuarios
 app.get('/api/usuarios', async (req,res)=>{
     const ruta = './data/usuarios.json';
     const usuarios = await readJson(ruta);
@@ -27,20 +25,15 @@ app.get('/api/usuarios', async (req,res)=>{
     });
 });
 
-// GET - Categorias
-const fs = require('fs').promises;
-const path = require('path');
-
 app.get('/api/categorias', async (req, res) => {
   try {
     const data = await fs.readFile(path.join(__dirname, 'data', 'categorias.json'), 'utf8');
     const categorias = JSON.parse(data);
     
     res.status(200).json({
-      success: true,
-      count: categorias.length,
-      data: categorias,
-      message: 'Categorías obtenidas correctamente'
+      status: 200,
+      message: 'Categorías obtenidas correctamente',
+      data: categorias
     });
     
   } catch (error) {
@@ -53,7 +46,6 @@ app.get('/api/categorias', async (req, res) => {
   }
 });
 
-// Get - Pedidos
 app.get('/api/pedidos', async (req, res) => {
     const ruta = './data/pedidos.json';
     const pedidos = await readJson(ruta);
@@ -63,7 +55,6 @@ app.get('/api/pedidos', async (req, res) => {
         data: pedidos
     })
 });
-
 
 app.listen(PORT, () => {
     console.log(`Servidor escuchando en http://localhost:${PORT}`);

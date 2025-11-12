@@ -20,7 +20,12 @@ app.get('/api/productos', async (req, res)=>{
 })
 
 // GET - USuarios
-
+app.get('/api/usuarios', async (req,res)=>{
+    const ruta = './data/usuarios.json';
+    const usuarios = await readJson(ruta);
+    res.status(200).json({ status:200, message:'success', data:{usuarios:usuarios}
+    });
+});
 
 // GET - Categorias
 const fs = require('fs').promises;

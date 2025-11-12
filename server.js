@@ -13,7 +13,11 @@ async function readJson(ruta) {
 };
 
 // GET - Productos
-
+app.get('/api/productos', async (req, res)=>{
+    const ruta = './data/productos.json'
+    const productos = await readJson(ruta);
+    res.json({status:200, message:'success', data:{produtos:productos}});
+})
 
 // GET - USuarios
 
